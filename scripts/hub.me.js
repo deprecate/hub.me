@@ -51,7 +51,7 @@
 
     	var repos = [];
 
-        $.getJSON('https://api.github.com/users/' + this._defaults.username + '/repos', function (result) {
+        $.getJSON('https://api.github.com/users/' + this._defaults.username + '/repos?callback=?', function (result) {
 			
 			$.each(result, function(i, field) {
 	    		if (field.language != null)
