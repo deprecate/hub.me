@@ -1,0 +1,187 @@
+/* CSS Reset (customised) */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, small, strong {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+body { display: block; }
+html { overflow-y: scroll; }
+a:hover, a:active { outline: none; }
+small { font-size: 85%; }
+strong, th { font-weight: bold; }
+::-moz-selection{ background: #3b7cbf; color: #fff; text-shadow: none; }
+::selection { background: #3b7cbf; color: #fff; text-shadow: none; }
+a:link { -webkit-tap-highlight-color: #3b7cbf; }
+.ie7 img { -ms-interpolation-mode: bicubic; }
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+
+/* Primary Styles */
+  
+body {
+	padding: 10px;
+	font: 1em "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+	color: #515047;
+	background-color: #e5ebf2;
+}
+
+a, a:link, a:visited, a:active, .title, .category {
+	text-decoration: none;
+}
+
+article, section {
+	padding: 1%;
+	float: left;
+	height: auto;
+	z-index: 2;
+	display: block;
+	padding-bottom: 10%;
+	position: relative;
+}
+
+h1, h2, h3 { 
+	font-size: 3em; 
+}
+
+h1 a {
+	color: #6d7486;
+	line-height: 1.1;
+	letter-spacing: -0.05em;
+}
+
+h2 {
+	color: #afb6ca;
+	line-height: 0.9;
+	letter-spacing: -0.05em;
+	z-index: 2;
+	display: block;
+}
+
+h3 {
+	color: #3b7cbf;
+	line-height: 0.9;
+	letter-spacing: -0.05em;
+}
+
+p {
+	font-size: 1.25em; 
+	line-height: 1.15;
+	margin: 0.75em 0;
+	color: #999fb2;
+	z-index: 2;
+}
+
+a {
+	font-size: 1em; 
+	color: #4183C4;
+	z-index: 2;
+}
+
+img { max-width: 100%; }
+
+footer {
+	position: fixed;
+	bottom: -5px;
+	right: 20px;
+	z-index: 1;
+	display: block;
+}
+
+/* Media Queries */
+
+/* Column Control Media Queries */
+
+@media screen and (min-width:500px) {
+	
+	body {
+		max-width: 1600px;
+		margin: 0 auto;
+		padding: 40px;
+		overflow: hidden;
+	}
+
+	article {
+		-webkit-transition: background-color .3s linear;
+		-moz-transition: -color .3s linear;
+		transition: background-color .3s linear;
+	}
+	
+	article:hover { 
+		background-color: #eef3f7;
+	}
+	
+	article, section {
+		position: relative;
+		top: 0;
+		overflow: hidden;
+	}
+
+	div, h2 { 
+		position: absolute; 
+	}
+
+}
+
+/* Two Column */
+
+@media screen and (min-width:500px) {
+	article, section {
+		width: 45%;
+		margin: 0 3% 20px 0;
+		padding-bottom: 45%;
+	}
+}
+
+/* Three Column */
+
+@media screen and (min-width:800px) {
+	article, section {
+		width: 29%;
+		margin: 0 2% 20px 0;
+		padding-bottom: 29%;
+	}
+}
+
+/* Four Column */
+
+@media screen and (min-width:1200px) {
+	article, section {
+		width: 21%;
+		margin: 20px 2% 0 0;
+		padding-bottom: 21%;
+	}
+}
+
+/* Font Size Control Media Queries */
+
+@media screen and (min-width:500px) {
+	h1, h2, h3 { font-size: 2em; }
+	p { font-size: 1em; line-height: 1.2; }
+}
+@media screen and (min-width:600px) {
+	h1, h2, h3 { font-size: 2.5em; }
+}
+@media screen and (min-width:700px) {
+	h1, h2, h3 { font-size: 3em; }
+	p { font-size: 1.25em; }
+}
+@media screen and (min-width:800px) {
+	h1, h2, h3 { font-size: 2.5em; }
+	p { font-size: 1em; }
+}
+@media screen and (min-width:1000px) {
+	h1, h2, h3 { font-size: 3.25em; }
+	p { font-size: 1.25em; }
+}
+@media screen and (min-width:1200px) {
+	p { font-size: 1em; }
+}
+@media screen and (min-width:1400px) {
+	p { font-size: 1.25em; }
+}
+@media screen and (min-width:1600px) {
+	h1, h2, h3 { font-size: 4em; }
+}
+
