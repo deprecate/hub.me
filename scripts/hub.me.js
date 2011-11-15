@@ -49,63 +49,37 @@
 
     Plugin.prototype.getRepos = function () {
 
-    	var self = this;
-        var repos = [];
+    	var repos = [];
 
-        $.getJSON('https://api.github.com/users/' + this.options.username + '/repos?callback=?', function (result) {
+        $.getJSON('https://api.github.com/users/' + this._defaults.username + '/repos?callback=?', function (result) {
 			
-			$.each(result.data, function(i, field) {
+			$.each(result, function(i, field) {
 	    		if (field.language != null)
 	    			repos.push(field);
 			});
 
-			repos = orderByLanguages(repos);
+			repos = this.orderByLanguages(repos);
 
 			$.each(repos, function(i, field) {
 	    		
 	    		if (i > 0) {
 					if (repos[i].language != repos[i-1].language) {
-		    			self.createCategory(repos[i].language);
+		    			createCategory(repos[i].language);
 		    		}	    			
 	    		}
 	    		else {
-	    			self.createCategory(repos[i].language);
+	    			createCategory(repos[i].language);
 	    		}
 
-	    		self.createRepo(repos[i]);
+	    		createRepo(repos[i]);
 
 			});
 
         });
     };
 
-    Plugin.prototype.createCategory = function(catName) {
-
-        var cat =   '<section>' +
-                        '<h2>' + catName + '</h2>' +
-                    '</section>';
-
-        $(this.element).append(cat);
-
-    };
-
-    Plugin.prototype.createRepo = function(repo) {
-
-        var repository =    '<article>' +
-                                '<div>' +
-                                    '<h1><a href="' + repo.html_url + '">' + repo.name + '</a></h1>' +
-                                    '<p>' + repo.description + '</p>' +
-                                    '<a href="' + repo.homepage + '">' + repo.homepage + '</a>' +
-                                '</div>' +
-                            '</article>'; 
-
-        $(this.element).append(repository);
-
-    };
-
-    var orderByLanguages = function(repos) {
-    	
-        return repos.sort(function(a, b) {
+    var orderByLanguages = function() {
+    	return repos.sort(function(a, b) {
 				
 				var langA = a.language, 
 					langB = b.language;
@@ -117,6 +91,30 @@
 
 			});
     }
+
+    	var createCategory = function(catName) {
+			
+			var cat = '<div class="category">' +
+							'<h2>' + catName + '</h2>' +
+					   '</div>';
+
+			$('body').append(cat);
+
+		}
+
+		var createRepo = function(repo) {
+			
+			var repository = '<a href="' + repo.html_url + '" class="title">' +
+								'<div>' +
+									'<h1>' + repo.name + '</h1>' +
+									'<p>' + repo.description + '</p>' +
+									'<small>' + repo.homepage + '</small>' +
+								'</div>' +
+							'</a>';	
+
+			$('body').append(repository);
+			
+		}
 
     // A really lightweight plugin wrapper around the constructor, 
     // preventing against multiple instantiations

@@ -115,7 +115,7 @@ footer {
 	article, section {
 		position: relative;
 		top: 0;
-		overflow: inherit;
+		overflow: hidden;
 	}
 
 	div, h2 { 
