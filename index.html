@@ -15,7 +15,7 @@
 </head> 
 <body>
 
-	<article>
+	<!-- <article>
 		<div>
 			<h1><a href="https://github.com/zenorocha/jquery-boilerplate">jQuery Boilerplate</a></h1>
 			<p>A boilerplate for jump-starting jQuery plugins development</p>
@@ -122,15 +122,23 @@
 			<p>A lightning talk about how to build a robust HTML5 application</p> 
 			<a href="http://slidesha.re/juKq0d">slidesha.re/juKq0d</a>
 		</div>
-	</article>
+	</article> -->
 
 	<footer>
 		<img src="img/github.png" alt="Github's Logo" />
 	</footer>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
 	<script src="scripts/css3-mediaqueries.js"></script>
-	<script src="scripts/script.js"></script>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+	<script src="scripts/hub.me.js"></script>
+
+	<script>
+		$('body').hubMe({
+			'username': 'zenorocha'
+		});
+
+	</script>
 
 </body> 
 </html>
