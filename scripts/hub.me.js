@@ -82,7 +82,7 @@
     Plugin.prototype.createCategory = function(catName) {
 
         var cat =   '<section>' +
-                        '<h2>' + catName + '</h2>' +
+                        '<h1>' + catName + '</h1>' +
                     '</section>';
 
         $(this.element).append(cat);
@@ -93,7 +93,7 @@
 
         var repository =    '<article>' +
                                 '<div>' +
-                                    '<h1><a href="' + repo.html_url + '">' + repo.name + '</a></h1>' +
+                                    '<h2><a href="' + repo.html_url + '">' + repo.name + '</a></h2>' +
                                     '<p>' + repo.description + '</p>' +
                                     '<a href="' + repo.homepage + '">' + repo.homepage + '</a>' +
                                 '</div>' +
