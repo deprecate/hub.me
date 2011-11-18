@@ -1,11 +1,11 @@
-hub.me
+hub.me #ftw
 ==================================================
-Version 0.1
 
-Let me guess...
+Let me guess!
 
-1. You're lazy
-2. You want to show to everybody all your cool open source projects
+1. You're a lazy programmer.
+2. You have a lot of cool projects here at Github.
+3. You want to show the world all your open source stuff.
 
 am I right? So guess what, I have the perfect thing to you.
 
