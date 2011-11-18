@@ -20,11 +20,9 @@
     // minified (especially when both are regularly referenced in your plugin).
 
     // Create the defaults once
-    var hubMe = 'defaultHubMe',
+    var hubMe = 'hubMe',
         defaults = {
-            propertyName: 'value',
-            username: 'github',
-            //sortBy: 'language' //popularity 
+            username: 'github'
         };
 
     // The actual plugin constructor
@@ -49,72 +47,74 @@
 
     Plugin.prototype.getRepos = function () {
 
-    	var repos = [];
+        var self = this;
+        var repos = [];
 
-        $.getJSON('https://api.github.com/users/' + this._defaults.username + '/repos', function (result) {
-			
-			$.each(result, function(i, field) {
-	    		if (field.language != null)
-	    			repos.push(field);
-			});
+        $.getJSON('https://api.github.com/users/' + this.options.username + '/repos?callback=?', function (result) {
+            
+            $.each(result.data, function(i, field) {
+                if (field.language != null)
+                    repos.push(field);
+            });
 
-			repos = this.orderByLanguages(repos);
+            repos = orderByLanguages(repos);
 
-			$.each(repos, function(i, field) {
-	    		
-	    		if (i > 0) {
-					if (repos[i].language != repos[i-1].language) {
-		    			createCategory(repos[i].language);
-		    		}	    			
-	    		}
-	    		else {
-	    			createCategory(repos[i].language);
-	    		}
+            $.each(repos, function(i, field) {
+                
+                if (i > 0) {
+                    if (repos[i].language != repos[i-1].language) {
+                        self.createCategory(repos[i].language);
+                    }                   
+                }
+                else {
+                    self.createCategory(repos[i].language);
+                }
 
-	    		createRepo(repos[i]);
+                self.createRepo(repos[i]);
 
-			});
+            });
 
         });
     };
 
-    var orderByLanguages = function() {
-    	return repos.sort(function(a, b) {
-				
-				var langA = a.language, 
-					langB = b.language;
+    Plugin.prototype.createCategory = function(catName) {
 
-			 	if (langA < langB)
-			  		return -1;
-			 	if (langA > langB)
-			  		return 1;
+        var cat =   '<section>' +
+                        '<h1>' + catName + '</h1>' +
+                    '</section>';
 
-			});
+        $(this.element).append(cat);
+
+    };
+
+    Plugin.prototype.createRepo = function(repo) {
+
+        var repository =    '<article>' +
+                                '<div>' +
+                                    '<h2><a href="' + repo.html_url + '">' + repo.name + '</a></h2>' +
+                                    '<p>' + repo.description + '</p>' +
+                                    '<a href="' + repo.homepage + '">' + repo.homepage + '</a>' +
+                                '</div>' +
+                            '</article>'; 
+
+        $(this.element).append(repository);
+
+    };
+
+    var orderByLanguages = function(repos) {
+        
+        return repos.sort(function(a, b) {
+                
+                var langA = a.language, 
+                    langB = b.language;
+
+                if (langA < langB)
+                    return -1;
+                if (langA > langB)
+                    return 1;
+
+            });
     }
-
-    	var createCategory = function(catName) {
-			
-			var cat = '<div class="category">' +
-							'<h2>' + catName + '</h2>' +
-					   '</div>';
-
-			$('body').append(cat);
-
-		}
-
-		var createRepo = function(repo) {
-			
-			var repository = '<a href="' + repo.html_url + '" class="title">' +
-								'<div>' +
-									'<h1>' + repo.name + '</h1>' +
-									'<p>' + repo.description + '</p>' +
-									'<small>' + repo.homepage + '</small>' +
-								'</div>' +
-							'</a>';	
-
-			$('body').append(repository);
-			
-		}
 
     // A really lightweight plugin wrapper around the constructor, 
     // preventing against multiple instantiations

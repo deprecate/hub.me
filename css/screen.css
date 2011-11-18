@@ -42,16 +42,16 @@ article, section {
 }
 
 h1, h2, h3 { 
-	font-size: 3em; 
+	font-size: 3em;
 }
 
-h1 a {
+h2 a {
 	color: #6d7486;
 	line-height: 1.1;
 	letter-spacing: -0.05em;
 }
 
-h2 {
+h1 {
 	color: #afb6ca;
 	line-height: 0.9;
 	letter-spacing: -0.05em;
@@ -77,6 +77,7 @@ a {
 	font-size: 1em; 
 	color: #4183C4;
 	z-index: 2;
+	word-break: break-word;
 }
 
 img { max-width: 100%; }
@@ -115,10 +116,10 @@ footer {
 	article, section {
 		position: relative;
 		top: 0;
-		overflow: hidden;
+		overflow: inherit;
 	}
 
-	div, h2 { 
+	div, h1 { 
 		position: absolute; 
 	}
 
@@ -127,31 +128,37 @@ footer {
 /* Two Column */
 
 @media screen and (min-width:500px) {
+	
 	article, section {
 		width: 45%;
 		margin: 0 3% 20px 0;
 		padding-bottom: 45%;
 	}
+
 }
 
 /* Three Column */
 
 @media screen and (min-width:800px) {
+	
 	article, section {
 		width: 29%;
 		margin: 0 2% 20px 0;
 		padding-bottom: 29%;
 	}
+
 }
 
 /* Four Column */
 
 @media screen and (min-width:1200px) {
+	
 	article, section {
 		width: 21%;
 		margin: 20px 2% 0 0;
 		padding-bottom: 21%;
 	}
+
 }
 
 /* Font Size Control Media Queries */
