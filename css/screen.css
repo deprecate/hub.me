@@ -57,6 +57,7 @@ h1 {
 	letter-spacing: -0.05em;
 	z-index: 2;
 	display: block;
+	word-break: break-word;
 }
 
 h3 {
