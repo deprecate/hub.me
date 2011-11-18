@@ -23,13 +23,13 @@ Just fork this repository.
 Then you must change the repository name to `yourUsername.github.com`.
 
 ### Step 3:
-Now you have to open the `index.html` and change a single value on the bottom.
+Now you have to open the `index.html` and put your username on it.
 
     <script>
 		$('body').hubMe({'username': 'yourUsername'});
 	</script>
 
-Easy huh?
+Easy, huh?
 
 Credits
 ---------------
