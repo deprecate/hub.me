@@ -36,7 +36,7 @@ Easy, huh?
 Credits
 ---------------
 * jQuery plugin built with [jQuery Boilerplate](http://jqueryboilerplate.com/)
-* Responsive design inspired by [Dinosaurs with Laserz](http://dinosaurswithlserz.com/)
+* Responsive design inspired by [Dinosaurs with Laserz](http://dinosaurswithlaserz.com/)
 
 License
 ---------------
