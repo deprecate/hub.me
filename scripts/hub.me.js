@@ -47,8 +47,9 @@
 
     Plugin.prototype.getRepos = function () {
 
-        var self = this;
-        var repos = [];
+        var self = this,
+        repos = [],
+        thisRepo = this.options.username + '.github.com';
 
         $.getJSON('https://api.github.com/users/' + this.options.username + '/repos?callback=?', function (result) {
             
@@ -64,13 +65,15 @@
                 if (i > 0) {
                     if (repos[i].language != repos[i-1].language) {
                         self.createCategory(repos[i].language);
-                    }                   
+                    }
                 }
                 else {
                     self.createCategory(repos[i].language);
                 }
 
-                self.createRepo(repos[i]);
+                if (repos[i].name != thisRepo) {
+                    self.createRepo(repos[i]);
+                }
 
             });
 
