@@ -180,7 +180,7 @@ footer {
 	p { font-size: 1em; }
 }
 @media screen and (min-width:1000px) {
-	h1, h2, h3 { font-size: 3.25em; }
+	h1, h2, h3 { font-size: 3.0em; }
 	p { font-size: 1.25em; }
 }
 @media screen and (min-width:1200px) {
