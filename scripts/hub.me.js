@@ -20,11 +20,9 @@
     // minified (especially when both are regularly referenced in your plugin).
 
     // Create the defaults once
-    var hubMe = 'defaultHubMe',
+    var hubMe = 'hubMe',
         defaults = {
-            propertyName: 'value',
-            username: 'github',
-            //sortBy: 'language' //popularity 
+            username: 'github'
         };
 
     // The actual plugin constructor
@@ -49,32 +47,32 @@
 
     Plugin.prototype.getRepos = function () {
 
-    	var self = this;
+        var self = this;
         var repos = [];
 
         $.getJSON('https://api.github.com/users/' + this.options.username + '/repos?callback=?', function (result) {
-			
-			$.each(result.data, function(i, field) {
-	    		if (field.language != null)
-	    			repos.push(field);
-			});
+            
+            $.each(result.data, function(i, field) {
+                if (field.language != null)
+                    repos.push(field);
+            });
 
-			repos = orderByLanguages(repos);
+            repos = orderByLanguages(repos);
 
-			$.each(repos, function(i, field) {
-	    		
-	    		if (i > 0) {
-					if (repos[i].language != repos[i-1].language) {
-		    			self.createCategory(repos[i].language);
-		    		}	    			
-	    		}
-	    		else {
-	    			self.createCategory(repos[i].language);
-	    		}
+            $.each(repos, function(i, field) {
+                
+                if (i > 0) {
+                    if (repos[i].language != repos[i-1].language) {
+                        self.createCategory(repos[i].language);
+                    }                   
+                }
+                else {
+                    self.createCategory(repos[i].language);
+                }
 
-	    		self.createRepo(repos[i]);
+                self.createRepo(repos[i]);
 
-			});
+            });
 
         });
     };
@@ -104,18 +102,18 @@
     };
 
     var orderByLanguages = function(repos) {
-    	
+        
         return repos.sort(function(a, b) {
-				
-				var langA = a.language, 
-					langB = b.language;
+                
+                var langA = a.language, 
+                    langB = b.language;
 
-			 	if (langA < langB)
-			  		return -1;
-			 	if (langA > langB)
-			  		return 1;
+                if (langA < langB)
+                    return -1;
+                if (langA > langB)
+                    return 1;
 
-			});
+            });
     }
 
     // A really lightweight plugin wrapper around the constructor, 
