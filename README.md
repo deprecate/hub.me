@@ -15,18 +15,40 @@ Let me introduce you hub.me, an alternative and responsive gallery to display al
 Getting Started
 ---------------
 
-### Step 1: Fork
-Go to [hub.me](https://github.com/zenorocha/hub.me)'s repository and fork it.
+### Step 1:
 
-### Step 2: Name
-Now you must change the repository name to `yourUsername.github.com`
+Just fork this repository.
 
-### Step 3: Almost there
-Then you have to open the `index.html` and change a single value on the bottom.
+### Step 2:
+Then you must change the repository name to `yourUsername.github.com`.
+
+### Step 3:
+Now you have to open the `index.html` and change a single value on the bottom.
 
     <script>
 		$('body').hubMe({'username': 'yourUsername'});
 	</script>
 
-### Step 4: Be happy
-Finally, you just have to push it and see it on your browser.
+Easy huh?
+
+Credits
+---------------
+* jQuery plugin built with [jQuery Boilerplate](http://jqueryboilerplate.com/)
+* Responsive design inspired by [Dinosaurs with Laserz](http://dinosaurswithlserz.com/)
+
+License
+---------------
+### WTFPL
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+                    Version 2, December 2004
+
+ Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
+
+ Everyone is permitted to copy and distribute verbatim or modified
+ copies of this license document, and changing it is allowed as long
+ as the name is changed.
+
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+  0. You just DO WHAT THE FUCK YOU WANT TO.
