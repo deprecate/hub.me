@@ -71,7 +71,8 @@ a {
 
 img { 
 	max-width: 100%; 
-	opacity: 0.5;
+	opacity: 0.18;
+	display: none;
 }
 
 footer {
@@ -105,6 +106,37 @@ footer {
 	color: #4183C4;
 }
 
+.blue article:hover { 
+	background-color: #eef3f7;
+}
+
+/* Gray theme */
+
+.gray {
+	background-color: #e6e6e7;
+	color: #515047;
+}
+
+.gray h2 a {
+	color: #747576;
+}
+
+.gray h1 {
+	color: #b3b4b6;
+}
+
+.gray p {
+	color: #9e9fa3;
+}
+
+.gray a {
+	color: #747576;
+}
+
+.gray article:hover { 
+	background-color: #f4f4f4;
+}
+
 /* Media Queries */
 
 /* Column Control Media Queries */
@@ -124,10 +156,6 @@ footer {
 		transition: background-color .3s linear;
 	}
 	
-	article:hover { 
-		background-color: #eef3f7;
-	}
-	
 	article, section {
 		position: relative;
 		top: 0;
@@ -136,6 +164,10 @@ footer {
 
 	div, h1 { 
 		position: absolute; 
+	}
+
+	img {
+		display: block;
 	}
 
 }
