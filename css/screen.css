@@ -137,6 +137,33 @@ footer {
 	background-color: #f4f4f4;
 }
 
+/* Black theme */
+
+.black {
+	background-color: #3d3d3d;
+	color: #515047;
+}
+
+.black h2 a {
+	color: #d4d2d2;
+}
+
+.black h1 {
+	color: #313131;
+}
+
+.black p {
+	color: #9e9fa3;
+}
+
+.black a {
+	color: #d4d2d2;
+}
+
+.black article:hover { 
+	background-color: #444141;
+}
+
 /* Media Queries */
 
 /* Column Control Media Queries */
