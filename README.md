@@ -33,6 +33,21 @@ Easy, huh?
 
 *Just remember that may take up to 10 minutes to Github activate pages for your account.
 
+Themes
+---------------
+
+If you want another appearance just change the class of the html tag.
+
+	<html class="blue">
+
+For now you have three choices to customize it.
+
+* blue (default)
+* gray
+* black
+
+And, of course, you can create your own theme and then send to us :)
+
 Credits
 ---------------
 * jQuery plugin built with [jQuery Boilerplate](http://jqueryboilerplate.com/)
