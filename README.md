@@ -40,7 +40,7 @@ If you want another appearance just change the class of the html tag.
 
 	<html class="blue">
 
-For now you have three choices to customize it.
+For now you have 3 choices to customize it:
 
 * blue (default)
 * gray
