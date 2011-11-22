@@ -11,6 +11,11 @@ am I right? So guess what, I have the perfect thing to you.
 
 Let me introduce you hub.me, an alternative and responsive gallery to display all your projects on Github.
 
+Why?
+---------------
+
+Discover it reading the history of my friend Clark Kent [here](https://gist.github.com/1385423). Portuguese version [here](https://gist.github.com/1385464).
+
 
 Getting Started
 ---------------
