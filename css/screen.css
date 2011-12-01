@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: bold; }
 body {
 	padding: 10px;
 	font: 1em "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+	color: #515047;
 }
 
 a, a:link, a:visited, a:active, .title, .category {
@@ -83,86 +84,6 @@ footer {
 	display: block;
 }
 
-/* Blue theme */
-
-.blue body {
-	background-color: #e5ebf2;
-	color: #515047;
-}
-
-.blue h2 a {
-	color: #6d7486;
-}
-
-.blue h1 {
-	color: #afb6ca;
-}
-
-.blue p {
-	color: #999fb2;
-}
-
-.blue a {
-	color: #4183C4;
-}
-
-.blue article:hover { 
-	background-color: #eef3f7;
-}
-
-/* Gray theme */
-
-.gray {
-	background-color: #e6e6e7;
-	color: #515047;
-}
-
-.gray h2 a {
-	color: #747576;
-}
-
-.gray h1 {
-	color: #b3b4b6;
-}
-
-.gray p {
-	color: #9e9fa3;
-}
-
-.gray a {
-	color: #747576;
-}
-
-.gray article:hover { 
-	background-color: #f4f4f4;
-}
-
-/* Black theme */
-
-.black {
-	background-color: #3d3d3d;
-	color: #515047;
-}
-
-.black h2 a {
-	color: #d4d2d2;
-}
-
-.black h1 {
-	color: #313131;
-}
-
-.black p {
-	color: #9e9fa3;
-}
-
-.black a {
-	color: #d4d2d2;
-}
-
-.black article:hover { 
-	background-color: #444141;
-}
 
 /* Media Queries */
 
