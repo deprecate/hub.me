@@ -1,0 +1,31 @@
+/* Black theme */
+
+/* body */
+body {
+	background-color: #3d3d3d;
+}
+
+/* category title color */
+h1 {
+	color: #313131;
+}
+
+/* repository title color */
+h2 a {
+	color: #d4d2d2;
+}
+
+/* repository link color */
+a {
+	color: #d4d2d2;
+}
+
+/* repository text color */
+p {
+	color: #9e9fa3;
+}
+
+/* repository hover background-color */
+article:hover { 
+	background-color: #444141;
+}
