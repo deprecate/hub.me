@@ -1,0 +1,31 @@
+/* Gray theme */
+
+/* body */
+body {
+	background-color: #e6e6e7;
+}
+
+/* category title color */
+h1 {
+	color: #b3b4b6;
+}
+
+/* repository title color */
+h2 a {
+	color: #747576;
+}
+
+/* repository link color */
+a {
+	color: #747576;
+}
+
+/* repository text color */
+p {
+	color: #9e9fa3;
+}
+
+/* repository hover background-color */
+article:hover { 
+	background-color: #f4f4f4;
+}
