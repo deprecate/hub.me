@@ -41,9 +41,9 @@ Easy, huh?
 Themes
 ---------------
 
-If you want another appearance just change the class of the html tag.
+If you want another appearance just tell the plugin.
 
-	<html class="blue">
+	$('body').hubMe({'theme': 'black'});
 
 For now you have 3 choices to customize it:
 
