@@ -22,7 +22,8 @@
     // Create the defaults once
     var hubMe = 'hubMe',
         defaults = {
-            username: 'github'
+            username: 'github',
+            theme: 'blue'
         };
 
     // The actual plugin constructor
@@ -38,10 +39,16 @@
         this._defaults = defaults;
         this._name = hubMe;
         
-        this.init();
+        this.init();        
     }
 
     Plugin.prototype.init = function () {
+        // add theme
+        if( this.options.theme != this._defaults.theme ){
+            $('#theme-css').attr('href', 'css/themes/'+ this.options.theme +'.css');     
+        }   
+        
+        // get repository
         this.getRepos();
     };
 
