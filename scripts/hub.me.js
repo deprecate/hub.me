@@ -44,9 +44,7 @@
 
     Plugin.prototype.init = function () {
         // add theme
-        if( this.options.theme != this._defaults.theme ){
-            $('#theme-css').attr('href', 'css/themes/'+ this.options.theme +'.css');     
-        }   
+        $('#theme-css').attr('href', 'css/themes/' + this.options.theme + '.css');
         
         // get repository
         this.getRepos();
