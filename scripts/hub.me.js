@@ -23,7 +23,8 @@
     var hubMe = 'hubMe',
         defaults = {
             username: 'github',
-            theme: 'blue'
+            theme: 'blue',
+            exclude: []
         };
 
     // The actual plugin constructor
@@ -67,17 +68,20 @@
 
             $.each(repos, function(i, field) {
                 
-                if (i > 0) {
-                    if (repos[i].language != repos[i-1].language) {
+                if ( $.inArray( repos[i].name, self.options.exclude ) === -1 ) {
+                
+                    if (i > 0) {
+                        if (repos[i].language != repos[i-1].language) {
+                            self.createCategory(repos[i].language);
+                        }
+                    }
+                    else {
                         self.createCategory(repos[i].language);
                     }
-                }
-                else {
-                    self.createCategory(repos[i].language);
-                }
 
-                if (repos[i].name != thisRepo) {
-                    self.createRepo(repos[i]);
+                    if (repos[i].name != thisRepo) {
+                        self.createRepo(repos[i]);
+                    }
                 }
 
             });
