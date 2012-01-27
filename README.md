@@ -38,12 +38,16 @@ Easy, huh?
 
 *Just remember that may take up to 10 minutes to Github activate pages for your account.
 
-Themes
+Options
 ---------------
+
+There are some nice features you can choose to create a even better gallery.
+
+### Themes
 
 If you want another appearance just tell the plugin.
 
-	$('body').hubMe({'theme': 'black'});
+	$('body').hubMe({ 'theme': 'black' });
 
 For now you have 3 choices to customize it:
 
@@ -52,6 +56,18 @@ For now you have 3 choices to customize it:
 * black
 
 And, of course, you can create your own theme and then send to us :)
+
+### Exclude
+
+You don't want to display particular projects? Fine.
+
+	$('body').hubMe({ 'exclude': ['wormz', 'cufon'] });
+
+### Languages
+
+You want the ability to hide the language sections? No problem.
+
+	$('body').hubMe({ 'languages': false });
 
 Credits
 ---------------
