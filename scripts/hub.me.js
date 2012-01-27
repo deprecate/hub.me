@@ -24,7 +24,8 @@
         defaults = {
             username: 'github',
             theme: 'blue',
-            exclude: []
+            exclude: [],
+            languages: true
         };
 
     // The actual plugin constructor
@@ -55,33 +56,32 @@
 
         var self = this,
         repos = [],
-        thisRepo = this.options.username + '.github.com';
+        thisRepo = self.options.username + '.github.com';
 
         $.getJSON('https://api.github.com/users/' + this.options.username + '/repos?callback=?', function (result) {
-            
-            $.each(result.data, function(i, field) {
-                if (field.language != null)
-                    repos.push(field);
+
+            $.each(result.data, function(i, field) {            
+            	if(field.language != null && field.name != thisRepo)
+					repos.push(field);
             });
-
+			
             repos = orderByLanguages(repos);
-
+			
             $.each(repos, function(i, field) {
                 
                 if ( $.inArray( repos[i].name, self.options.exclude ) === -1 ) {
-                
-                    if (i > 0) {
-                        if (repos[i].language != repos[i-1].language) {
-                            self.createCategory(repos[i].language);
-                        }
+                	if (self.options.languages) {
+	                    if (i > 0) {
+	                        if (repos[i].language != repos[i-1].language) {
+	                            self.createCategory(repos[i].language);
+	                        }
+	                    }
+	                    else {
+	                        self.createCategory(repos[i].language);
+	                    }
                     }
-                    else {
-                        self.createCategory(repos[i].language);
-                    }
-
-                    if (repos[i].name != thisRepo) {
-                        self.createRepo(repos[i]);
-                    }
+                    
+                    self.createRepo(repos[i]);
                 }
 
             });
@@ -94,7 +94,7 @@
         var cat =   '<section>' +
                         '<h1>' + catName + '</h1>' +
                     '</section>';
-
+		
         $(this.element).append(cat);
 
     };
