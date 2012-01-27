@@ -55,13 +55,13 @@
     Plugin.prototype.getRepos = function () {
 
         var self = this,
-        repos = [],
-        thisRepo = self.options.username + '.github.com';
+            repos = [],
+            thisRepo = self.options.username + '.github.com';
 
         $.getJSON('https://api.github.com/users/' + this.options.username + '/repos?callback=?', function (result) {
 
             $.each(result.data, function(i, field) {            
-            	if(field.language != null && field.name != thisRepo)
+            	if (field.language != null && field.name != thisRepo)
 					repos.push(field);
             });
 			
@@ -70,8 +70,10 @@
             $.each(repos, function(i, field) {
                 
                 if ( $.inArray( repos[i].name, self.options.exclude ) === -1 ) {
-                	if (self.options.languages) {
-	                    if (i > 0) {
+                	
+                    if (self.options.languages) {
+	                    
+                        if (i > 0) {
 	                        if (repos[i].language != repos[i-1].language) {
 	                            self.createCategory(repos[i].language);
 	                        }
@@ -79,6 +81,7 @@
 	                    else {
 	                        self.createCategory(repos[i].language);
 	                    }
+                        
                     }
                     
                     self.createRepo(repos[i]);
