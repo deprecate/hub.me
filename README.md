@@ -72,6 +72,7 @@ You want the ability to hide the language sections? No problem.
 Credits
 ---------------
 * jQuery plugin built with [jQuery Boilerplate](http://jqueryboilerplate.com/)
+* Mustache template engine
 * Responsive design inspired by [Dinosaurs with Laserz](http://dinosaurswithlaserz.com/)
 
 License
