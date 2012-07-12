@@ -95,7 +95,8 @@
     Plugin.prototype.createCategory = function(catName) {
 
         var tmpl = $('#category-item').html(),
-            cat = Mustache.to_html(tmpl, {category_name:catName});
+            params = {category_name:catName},
+            cat = Mustache.to_html(tmpl, params);
 
         this.element.append(cat);
 
