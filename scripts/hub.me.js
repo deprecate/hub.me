@@ -8,7 +8,7 @@
 
 // the semi-colon before function invocation is a safety net against concatenated
 // scripts and/or other plugins which may not be closed properly.
-;(function ( $, window, document, undefined ) {
+;(function ( $, Hogan, window, document, undefined ) {
 
     // undefined is used here as the undefined global variable in ECMAScript 3 is
     // mutable (ie. it can be changed by someone else). undefined isn't really being
@@ -94,9 +94,9 @@
 
     Plugin.prototype.createCategory = function(catName) {
 
-        var tmpl = $('#category-item').html(),
+        var tmpl = Hogan.compile( $('#category-item').html() ),
             params = {category_name:catName},
-            cat = Mustache.to_html(tmpl, params);
+            cat = tmpl.render(params);
 
         this.element.append(cat);
 
@@ -106,8 +106,8 @@
         // test if homepage begins with http or https
         repo.homepage = ( repo.homepage && !( /^(http|https):\/\//.test( repo.homepage ) ) ) ? "http://" + repo.homepage : repo.homepage;
 
-        var tmpl = $('#repository-item').html(),
-            repository = Mustache.to_html(tmpl, repo);
+        var tmpl = Hogan.compile( $('#repository-item').html() ),
+            repository = tmpl.render(repo);
 
         this.element.append(repository);
 
@@ -138,4 +138,4 @@
         });
     }
 
-})(jQuery, window, document);
+})(jQuery, Hogan, window, document);
