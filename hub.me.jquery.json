@@ -1,0 +1,34 @@
+{
+  "name": "hub.me",
+  "title": "jQuery Hub.me",
+  "description": "A responsive gallery to display your projects on Github.",
+  "keywords": [
+    "github",
+    "gallery",
+    "responsive"
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Zeno Rocha",
+    "url": "https://github.com/zenorocha"
+  },
+  "maintainers": [
+    {
+      "name": "Zeno Rocha",
+      "url": "https://github.com/zenorocha"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "WTFPL",
+      "url": "http://www.wtfpl.net/"
+    }
+  ],
+  "bugs": "https://github.com/zenorocha/hub.me/issues",
+  "homepage": "https://github.com/zenorocha/hub.me",
+  "docs": "https://github.com/zenorocha/hub.me#readme",
+  "download": "https://github.com/zenorocha/hub.me/archive/master.zip",
+  "dependencies": {
+    "jquery": ">=1.4"
+  }
+}
