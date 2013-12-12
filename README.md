@@ -1,5 +1,4 @@
-hub.me #ftw
-==================================================
+# hub.me
 
 Let me guess!
 
@@ -11,14 +10,12 @@ am I right? So guess what, I have the perfect thing to you.
 
 Let me introduce you hub.me, an alternative and responsive gallery to display all your projects on Github.
 
-Why?
----------------
+## Why?
 
 Discover it reading the history of my friend Clark Kent [here](https://gist.github.com/1385423). Portuguese version [here](https://gist.github.com/1385464).
 
 
-Getting Started
----------------
+## Getting Started
 
 ### Step 1:
 
@@ -38,8 +35,7 @@ Easy, huh?
 
 *Just remember that may take up to 10 minutes to Github activate pages for your account.
 
-Options
----------------
+## Options
 
 There are some nice features you can choose to create a even better gallery.
 
@@ -77,25 +73,11 @@ We do care about it.
 --- | --- | --- | --- | --- |
 IE 9+ ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
 
-Credits
----------------
+## Credits
+
 * jQuery plugin built with [jQuery Boilerplate](http://jqueryboilerplate.com/)
-* Mustache template engine
 * Responsive design inspired by [Dinosaurs with Laserz](http://dinosaurswithlaserz.com/)
 
-License
----------------
-### WTFPL
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-                    Version 2, December 2004
+## License
 
-	Copyright (C) 2004 Sam Hocevar <sam@hocevar.net>
-
-	Everyone is permitted to copy and distribute verbatim or modified
-	copies of this license document, and changing it is allowed as long
-	as the name is changed.
-
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-	TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
-
-	0. You just DO WHAT THE FUCK YOU WANT TO.
+[MIT License](http://zenorocha.mit-license.org/) © Zeno Rocha
