@@ -14,7 +14,6 @@ Let me introduce you hub.me, an alternative and responsive gallery to display al
 
 Discover it reading the history of my friend Clark Kent [here](https://gist.github.com/1385423). Portuguese version [here](https://gist.github.com/1385464).
 
-
 ## Getting Started
 
 ### Step 1:
@@ -27,9 +26,11 @@ Then you must change the repository name to `yourUsername.github.com`.
 ### Step 3:
 Now you have to open the `index.html` and put your username on it.
 
-    <script>
-		$('body').hubMe({'username': 'yourUsername'});
-	</script>
+```html
+<script>
+    $('body').hubMe({'username': 'yourUsername'});
+</script>
+```
 
 Easy, huh?
 
@@ -43,7 +44,9 @@ There are some nice features you can choose to create a even better gallery.
 
 If you want another appearance just tell the plugin.
 
-	$('body').hubMe({ 'theme': 'black' });
+```js
+$('body').hubMe({ 'theme': 'black' });
+```
 
 For now you have 3 choices to customize it:
 
@@ -57,19 +60,23 @@ And, of course, you can create your own theme and then send to us :)
 
 You don't want to display particular projects? Fine.
 
-	$('body').hubMe({ 'exclude': ['wormz', 'cufon'] });
+```js
+$('body').hubMe({ 'exclude': ['wormz', 'cufon'] });
+```
 
 ### Languages
 
 You want the ability to hide the language sections? No problem.
 
-	$('body').hubMe({ 'languages': false });
+```js
+$('body').hubMe({ 'languages': false });
+```
 
 ## Browser Support
 
 We do care about it.
 
-![IE](https://raw.github.com/paulirish/browser-logos/master/ie/ie_48x48.png) | ![Chrome](https://raw.github.com/paulirish/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.github.com/paulirish/browser-logos/master/firefox/firefox_48x48.png) | ![Opera](https://raw.github.com/paulirish/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.github.com/paulirish/browser-logos/master/safari/safari_48x48.png)
+![IE](https://cloud.githubusercontent.com/assets/398893/3528325/20373e76-078e-11e4-8e3a-1cb86cf506f0.png) | ![Chrome](https://cloud.githubusercontent.com/assets/398893/3528328/23bc7bc4-078e-11e4-8752-ba2809bf5cce.png) | ![Firefox](https://cloud.githubusercontent.com/assets/398893/3528329/26283ab0-078e-11e4-84d4-db2cf1009953.png) | ![Opera](https://cloud.githubusercontent.com/assets/398893/3528330/27ec9fa8-078e-11e4-95cb-709fd11dac16.png) | ![Safari](https://cloud.githubusercontent.com/assets/398893/3528331/29df8618-078e-11e4-8e3e-ed8ac738693f.png)
 --- | --- | --- | --- | --- |
 IE 9+ ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
 
