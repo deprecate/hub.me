@@ -20,8 +20,8 @@
   ],
   "licenses": [
     {
-      "type": "WTFPL",
-      "url": "http://www.wtfpl.net/"
+      "type": "MIT",
+      "url": "http://zenorocha.mit-license.org/"
     }
   ],
   "bugs": "https://github.com/zenorocha/hub.me/issues",
